@@ -16,9 +16,3 @@ class JSONFormatter(logging.Formatter):
         return json.dumps(log_data)
 
         
-logger = logging.getLogger("test")
-logger.setLevel(logging.INFO)
-handler = logging.StreamHandler()
-handler.setFormatter(JSONFormatter())
-logger.addHandler(handler)
-print(type(logger.info("user logged in")))
